@@ -1,4 +1,4 @@
-# 🛍️ AURA Goods — Devsmith E-Commerce Platform
+# 🛍️ Devsmith — E-Commerce Platform
 
 A precision-crafted, high-performance modern e-commerce storefront built with **Next.js 14 (App Router)**, **TypeScript**, and **Tailwind CSS**.
 
