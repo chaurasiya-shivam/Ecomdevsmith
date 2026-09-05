@@ -29,7 +29,7 @@ export default function Footer() {
           <div className="lg:col-span-4">
             <Link href="/" className="flex items-center gap-2">
               <span className="text-2xl font-black tracking-tight font-mono text-white">
-                {store.logoText}
+                {store.logoText || store.name}
               </span>
               {store.logoBadge && (
                 <span className="rounded bg-white/10 px-1.5 py-0.5 text-[10px] font-bold text-slate-200 tracking-widest uppercase">

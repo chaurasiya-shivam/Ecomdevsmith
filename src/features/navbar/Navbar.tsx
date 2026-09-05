@@ -47,7 +47,7 @@ export default function Navbar() {
 
           <Link href="/" className="flex items-center gap-2">
             <span className="text-xl font-black tracking-tight text-slate-950 font-mono">
-              {store.logoText}
+              {store.logoText || store.name}
             </span>
             {store.logoBadge && (
               <span className="rounded bg-slate-900 px-1.5 py-0.5 text-[10px] font-bold text-white tracking-widest uppercase">

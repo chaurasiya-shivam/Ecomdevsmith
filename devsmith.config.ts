@@ -2,11 +2,11 @@ import { EcommerceConfig } from "./src/types/ecommerce";
 
 export const ecommerceConfig: EcommerceConfig = {
   store: {
-    name: "AURA Goods",
+    name: "Devsmith",
     tagline: "Precision Crafted Goods for Modern Living",
     description:
       "Minimalist design meets acoustic precision and ergonomic craftsmanship. Built for creative professionals, audiophiles, and discerning minds.",
-    logoText: "AURA",
+    logoText: "Devsmith",
     logoBadge: "PRO",
     announcement: {
       enabled: true,
@@ -15,7 +15,7 @@ export const ecommerceConfig: EcommerceConfig = {
       linkHref: "/products",
     },
     contact: {
-      email: "concierge@auragoods.design",
+      email: "concierge@devsmith.design",
       phone: "+1 (800) 555-0199",
       address: "742 Evergreen Terrace, Suite 400, San Francisco, CA 94107",
       supportHours: "Mon – Fri: 9:00 AM – 8:00 PM EST",
@@ -542,7 +542,7 @@ export const ecommerceConfig: EcommerceConfig = {
         ],
       },
     ],
-    copyright: "© 2026 AURA Goods Co. Built with DevSmith. All rights reserved.",
+    copyright: "© 2026 Devsmith Co. Built with DevSmith. All rights reserved.",
     paymentMethods: ["Visa", "Mastercard", "Amex", "Apple Pay", "Google Pay", "PayPal"],
   },
 };
