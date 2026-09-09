@@ -73,7 +73,7 @@ export default function Hero() {
             <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-3xl border border-slate-200/80 bg-slate-100 shadow-2xl shadow-slate-300/40">
               <Image
                 src={hero.image}
-                alt="AURA Collection Hero"
+                alt={`${hero.headline} - ${ecommerceConfig.store.name}`}
                 fill
                 priority
                 className="object-cover object-center transition-transform duration-700 hover:scale-105"

@@ -19,7 +19,7 @@ export default function Testimonials() {
             Trusted by Creators & Engineers
           </h2>
           <p className="mt-3 text-base text-slate-600">
-            Read authentic impressions from designers, architects, and audiophiles who use AURA daily.
+            Read authentic impressions from designers, architects, and creators who use {ecommerceConfig.store.name} daily.
           </p>
         </div>
 

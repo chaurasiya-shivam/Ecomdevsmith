@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { ecommerceConfig } from "@/../devsmith.config";
 import { CartProvider } from "@/context/CartContext";
@@ -8,8 +7,6 @@ import { Navbar } from "@/features/navbar";
 import { CartDrawer } from "@/features/cart";
 import { Footer } from "@/features/footer";
 import { ToastNotification } from "@/components/Toast";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: `${ecommerceConfig.store.name} — ${ecommerceConfig.store.tagline}`,
@@ -38,7 +35,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="h-full">
-      <body className={`${inter.className} flex min-h-full flex-col bg-white text-slate-900`}>
+      <body className="flex min-h-full flex-col bg-background text-foreground font-sans antialiased">
         <CartProvider>
           <AnnouncementBar />
           <Navbar />

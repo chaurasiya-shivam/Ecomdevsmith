@@ -42,7 +42,7 @@ export default function Newsletter() {
               <div className="mt-8 flex items-center justify-center gap-2 rounded-2xl bg-white/10 p-4 text-emerald-400 backdrop-blur-md animate-fade-in">
                 <CheckCircle2 className="h-5 w-5" />
                 <span className="text-sm font-semibold">
-                  You are subscribed! Welcome to the AURA Collective.
+                  You are subscribed! Welcome to the {ecommerceConfig.store.name} community.
                 </span>
               </div>
             ) : (

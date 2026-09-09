@@ -19,6 +19,7 @@ import { useCart } from "@/context/CartContext";
 import { formatPrice } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { ecommerceConfig } from "@/../devsmith.config";
 
 export default function CheckoutView() {
   const router = useRouter();
@@ -35,7 +36,7 @@ export default function CheckoutView() {
   } = useCart();
 
   const [formData, setFormData] = useState({
-    email: "designer@auragoods.design",
+    email: "alex@example.com",
     firstName: "Alex",
     lastName: "Rivers",
     address: "742 Market Street, 8th Floor",
@@ -66,7 +67,8 @@ export default function CheckoutView() {
     setIsSubmitting(true);
     setTimeout(() => {
       setIsSubmitting(false);
-      const generatedOrder = "AURA-" + Math.floor(100000 + Math.random() * 900000);
+      const prefix = ecommerceConfig.store.name.toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 4) || "ORD";
+      const generatedOrder = `${prefix}-${Math.floor(100000 + Math.random() * 900000)}`;
       setOrderNumber(generatedOrder);
       setOrderComplete(true);
       clearCart();
@@ -258,11 +260,10 @@ export default function CheckoutView() {
                     <button
                       type="button"
                       onClick={() => setShippingMethod("standard")}
-                      className={`flex flex-col rounded-2xl border p-4 text-left transition-all ${
-                        shippingMethod === "standard"
-                          ? "border-slate-950 bg-slate-50/80 ring-2 ring-slate-950/10"
-                          : "border-slate-200 bg-white hover:border-slate-300"
-                      }`}
+                      className={`flex flex-col rounded-2xl border p-4 text-left transition-all ${shippingMethod === "standard"
+                        ? "border-slate-950 bg-slate-50/80 ring-2 ring-slate-950/10"
+                        : "border-slate-200 bg-white hover:border-slate-300"
+                        }`}
                     >
                       <span className="text-sm font-bold text-slate-900">Standard Global</span>
                       <span className="text-xs text-slate-500 mt-0.5">3-5 business days</span>
@@ -274,11 +275,10 @@ export default function CheckoutView() {
                     <button
                       type="button"
                       onClick={() => setShippingMethod("express")}
-                      className={`flex flex-col rounded-2xl border p-4 text-left transition-all ${
-                        shippingMethod === "express"
-                          ? "border-slate-950 bg-slate-50/80 ring-2 ring-slate-950/10"
-                          : "border-slate-200 bg-white hover:border-slate-300"
-                      }`}
+                      className={`flex flex-col rounded-2xl border p-4 text-left transition-all ${shippingMethod === "express"
+                        ? "border-slate-950 bg-slate-50/80 ring-2 ring-slate-950/10"
+                        : "border-slate-200 bg-white hover:border-slate-300"
+                        }`}
                     >
                       <span className="text-sm font-bold text-slate-900">Priority Courier</span>
                       <span className="text-xs text-slate-500 mt-0.5">Next-day guaranteed</span>
